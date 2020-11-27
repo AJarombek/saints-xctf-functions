@@ -12,15 +12,20 @@ const s3 = new AWS.S3();
 
 exports.upload = async (event) => {
     const env = process.env.ENV;
-    const body = Buffer.from(event.base64Image, 'base64')
+    const body = new Buffer.from(event.base64Image.replace(/^data:image\/\w+;base64,/, ''), 'base64')
+    const type = event.base64Image.split(';')[0].split('/')[1]
 
     try {
-        await s3.putObject({
-           Bucket: 'uasset.saintsxctf.com',
+        const data = await s3.putObject({
+            Bucket: 'uasset.saintsxctf.com',
             Key: `${env}/${event.username}/${event.fileName}`,
             Body: body,
-            Metadata: {}
-        });
+            ACL: 'public-read',
+            ContentEncoding: 'base64',
+            ContentType: `image/${type}`
+        }).promise();
+
+        console.info(data);
         return true;
     } catch (e) {
         console.info(`Failed to upload ${event.fileName}`);

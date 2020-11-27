@@ -4,7 +4,7 @@
  * @since 5/24/2020
  */
 
-const send = require('../aws-lambda-emails/send-email');
+const send = require('aws-lambda-emails');
 
 /**
  * Send a forgot password email upon user request.
