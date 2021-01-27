@@ -1,11 +1,11 @@
 /**
  * Send an email via an AWS Lambda function
  * @author Andrew Jarombek
- * @since 5/24/2020
+ * @since 1/26/2021
  */
 
 const AWS = require('aws-sdk');
-const sendForgotPasswordEmail = require('./email');
+const sendActivationCodeEmail = require('./email');
 
 AWS.config.update({region: 'us-east-1'});
 
@@ -15,7 +15,7 @@ AWS.config.update({region: 'us-east-1'});
  * @param context - runtime information regarding the AWS lambda function
  * @param callback - used to return information back to the caller.
  */
-exports.sendForgotPasswordEmail = (event, context, callback) => {
-    sendForgotPasswordEmail(event.to, event.code, event.username, event.firstName, event.lastName);
+exports.sendActivationCodeEmail = (event, context, callback) => {
+    sendActivationCodeEmail(event.email, event.code);
     callback(null);
 };

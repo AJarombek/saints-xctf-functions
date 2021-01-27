@@ -1,0 +1,19 @@
+{
+  "name": "saints-xctf-send-authentication-lambda-email",
+  "version": "1.0.0",
+  "description": "Function to Send an Authentication Code Email to Users",
+  "main": "sendEmailNode.js",
+  "repository": "https://github.com/AJarombek/saints-xctf-functions/send-authentication",
+  "author": "Andrew Jarombek <andrew@jarombek.com>",
+  "keywords": [
+    "NodeJS",
+    "AWS Lambda"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "aws-lambda-emails": "git://github.com/ajarombek/aws-lambda-emails.git#v1.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.797.0"
+  }
+}
