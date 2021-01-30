@@ -1,5 +1,7 @@
 ### Overview
 
+AWS Lambda function for sending an activation code email to a new user.
+
 ### Commands
 
 **Local Execution**

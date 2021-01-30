@@ -1,0 +1,17 @@
+{
+  "name": "saints-xctf-upload-group-picture",
+  "version": "1.0.0",
+  "description": "Function to upload a group picture to AWS S3.",
+  "main": "index.js",
+  "repository": "https://github.com/AJarombek/saints-xctf-functions/upload-group-picture",
+  "author": "Andrew Jarombek <andrew@jarombek.com>",
+  "keywords": [
+    "NodeJS",
+    "AWS Lambda"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "aws-sdk": "^2.797.0"
+  }
+}
