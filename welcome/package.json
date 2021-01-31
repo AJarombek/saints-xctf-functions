@@ -1,9 +1,9 @@
 {
-  "name": "saints-xctf-send-activation-lambda-email",
+  "name": "saints-xctf-welcome-lambda-email",
   "version": "1.0.0",
-  "description": "Function to Send an Activation Code Email to Users",
+  "description": "Function to Send an Welcome Email to New Users",
   "main": "sendEmailNode.js",
-  "repository": "https://github.com/AJarombek/saints-xctf-functions/send-activation",
+  "repository": "https://github.com/AJarombek/saints-xctf-functions/welcome",
   "author": "Andrew Jarombek <andrew@jarombek.com>",
   "keywords": [
     "NodeJS",

@@ -12,7 +12,7 @@ const send = require('aws-lambda-emails');
  * @param code Activation code for a new user to join SaintsXCTF.
  */
 function sendActivationCodeEmail(email, code) {
-    const subject = "SaintsXCTF Password Reset Request";
+    const subject = "Request to Join SaintsXCTF";
     const attachments = [
         {
             filename: 'saintsxctf.png',
