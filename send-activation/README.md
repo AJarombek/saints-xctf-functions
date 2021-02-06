@@ -14,3 +14,14 @@ yarn
 # Send an email locally.
 node sendEmailNode andrew@jarombek.com abc123
 ```
+
+### Files
+
+| Filename               | Description                                                                                  |
+|------------------------|----------------------------------------------------------------------------------------------|
+| `email.css`            | Stylesheet for the activation code email.                                                    |
+| `email.html`           | HTML document for the activation code email.                                                 |
+| `email.js`             | JavaScript code which sends the email.                                                       |
+| `package.json`         | `npm` dependencies for the AWS Lambda function.                                              |
+| `sendEmailAWS.js`      | JavaScript code which invokes `email.js`.  This script is meant for execution on AWS Lambda. |
+| `sendEmailNode.js`     | JavaScript code which invokes `email.js`.  This script is meant for execution locally.       |

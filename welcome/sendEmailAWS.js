@@ -16,6 +16,11 @@ AWS.config.update({region: 'us-east-1'});
  * @param callback - used to return information back to the caller.
  */
 exports.sendWelcomeEmail = (event, context, callback) => {
-    sendWelcomeEmail(event.to, event.firstName, event.lastName, event.username);
-    callback(null);
+    try {
+        sendWelcomeEmail(event.to, event.firstName, event.lastName, event.username);
+        callback(null, true);
+    } catch (err) {
+        console.error(err);
+        callback(Error(err), false);
+    }
 };
