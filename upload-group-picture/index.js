@@ -9,7 +9,7 @@ const { upload } = require('/opt/nodejs/picture');
 exports.handler = async (event) => {
     const env = process.env.ENV;
     const bucket = 'uasset.saintsxctf.com';
-    const key = `${env}/${event.groupId}/${event.fileName}`;
+    const key = `${env}/group/${event.groupId}/${event.fileName}`;
 
     return await upload(bucket, event.base64Image, key);
 };
