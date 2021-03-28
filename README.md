@@ -16,10 +16,11 @@ yarn
 
 ### Directories
 
-| Directory Name           | Description                                                                    |
-|--------------------------|--------------------------------------------------------------------------------|
-| `forgot-password`        | AWS Lambda function for sending a forgot password email.                       |
-| `send-authentication`    | AWS Lambda function for sending an authentication code email to a new user.    |
-| `upload-group-picture`   | AWS Lambda function for an admin uploading a group picture.                    |
-| `upload-profile-picture` | AWS Lambda function for a user uploading a profile picture.                    |
-| `welcome`                | AWS Lambda function for sending a welcome email to a new user.                 |
+| Directory Name           | Description                                                                       |
+|--------------------------|-----------------------------------------------------------------------------------|
+| `forgot-password`        | AWS Lambda function for sending a forgot password email.                          |
+| `send-authentication`    | AWS Lambda function for sending an authentication code email to a new user.       |
+| `upload-group-picture`   | AWS Lambda function for an admin uploading a group picture.                       |
+| `upload-profile-picture` | AWS Lambda function for a user uploading a profile picture.                       |
+| `welcome`                | AWS Lambda function for sending a welcome email to a new user.                    |
+| `mock`                   | Mocked implementation of the Function API, used for tests and local environments. |
