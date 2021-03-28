@@ -17,6 +17,19 @@ flask --version
 flask run
 ```
 
+**Run the Docker Image Locally**
+
+```bash
+# Build and start the container.
+docker container stop saints-xctf-functions-mock
+docker container rm saints-xctf-functions-mock
+docker image build \
+    -t saints-xctf-auth-functions:latest \
+    --network=host .
+
+docker container run -d -p 5001:5000 --name saints-xctf-auth-functions saints-xctf-auth-functions:latest
+```
+
 ### Files
 
 | Filename         | Description                                                                                  |
