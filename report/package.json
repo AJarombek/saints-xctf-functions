@@ -1,0 +1,19 @@
+{
+  "name": "saints-xctf-report-lambda-email",
+  "version": "1.0.0",
+  "description": "Function to Send an Email with a user's report/feedback",
+  "main": "sendEmailNode.js",
+  "repository": "https://github.com/AJarombek/saints-xctf-functions/report",
+  "author": "Andrew Jarombek <andrew@jarombek.com>",
+  "keywords": [
+    "NodeJS",
+    "AWS Lambda"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "aws-lambda-emails": "git://github.com/ajarombek/aws-lambda-emails.git#v1.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.797.0"
+  }
+}

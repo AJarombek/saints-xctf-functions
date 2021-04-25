@@ -1,0 +1,60 @@
+/*
+ * Styling for a report email.
+ * Author: Andrew Jarombek
+ * Date: 4/25/2021
+ */
+
+/* Apple Mail does not support max-width so set the width in a media query */
+@media only screen and (min-device-width: 601px) {
+    .content {
+        width: 600px !important;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100% !important;
+}
+
+.emailMain {
+    width: 100%;
+}
+
+.emailContent {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 20px auto;
+
+    background-color: white;
+}
+
+.emailTitle {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px 0 0 10px;
+}
+
+.emailh5 {
+    padding: 10px 30px 20px 30px;
+    text-align: center;
+
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 0.4px;
+    font-size: 28px;
+}
+
+.emailp {
+    padding: 0;
+    font-size: 14px;
+}
+
+.emailLogo {
+    padding-top: 10px;
+    height: 80px;
+    width: 80px;
+    margin-left: 0;
+}

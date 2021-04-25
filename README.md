@@ -19,6 +19,7 @@ yarn
 | Directory Name           | Description                                                                       |
 |--------------------------|-----------------------------------------------------------------------------------|
 | `forgot-password`        | AWS Lambda function for sending a forgot password email.                          |
+| `report`                 | AWS Lambda function for sending me an email with a user's report/feedback.        |
 | `send-authentication`    | AWS Lambda function for sending an authentication code email to a new user.       |
 | `upload-group-picture`   | AWS Lambda function for an admin uploading a group picture.                       |
 | `upload-profile-picture` | AWS Lambda function for a user uploading a profile picture.                       |
