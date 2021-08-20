@@ -26,6 +26,11 @@ def forgot_password_email():
     return jsonify({'result': True})
 
 
+@app.route('/email/report', methods=['POST'])
+def report_email():
+    return jsonify({'result': True})
+
+
 @app.route('/email/welcome', methods=['POST'])
 def welcome_email():
     return jsonify({'result': True})
