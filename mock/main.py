@@ -4,7 +4,7 @@ Author: Andrew Jarombek
 Date: 3/28/2021
 """
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -44,3 +44,19 @@ def uasset_group():
 @app.route('/uasset/user', methods=['POST'])
 def uasset_user():
     return jsonify({'result': True})
+
+
+@app.route('/uasset/signed-url/group', methods=['POST'])
+def uasset_signed_url_group():
+    return jsonify({
+        'uploadUrl': request.base_url,
+        'key': 'image.png'
+    })
+
+
+@app.route('/uasset/signed-url/user', methods=['POST'])
+def uasset_signed_url_user():
+    return jsonify({
+        'uploadUrl': request.base_url,
+        'key': 'image.png'
+    })
