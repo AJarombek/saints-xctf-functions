@@ -32,6 +32,16 @@ yarn
 
 ### Version History
 
+**[v2.1.0](https://github.com/AJarombek/saints-xctf-functions/tree/v2.1.0) - New Picture Uploading Approach**
+
+> Release Date: August 21st, 2021
+
+Created two new functions for uploading group and profile pictures.  These functions use an S3 bucket signed URL 
+approach, replacing the existing base64 encoded image approach. 
+
+* Signed URL Group Picture Function
+* Signed URL Profile Picture Function
+
 **[v2.0.0](https://github.com/AJarombek/saints-xctf-functions/tree/v2.0.0) - SaintsXCTF V2 Release**
 
 > Release Date: May 30th, 2021

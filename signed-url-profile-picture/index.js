@@ -11,7 +11,7 @@ const s3 = new AWS.S3();
 
 exports.handler = async (event) => {
     const env = process.env.ENV;
-    const fileExtension = event.contentType === 'image/jpeg' ? '.jpg' : '.png';
+    const fileExtension = event.contentType === 'image/jpeg' ? 'jpg' : 'png';
 
     const bucket = 'uasset.saintsxctf.com';
     const key = `${env}/profile/${event.username}/${Date.now()}.${fileExtension}`;
@@ -20,13 +20,13 @@ exports.handler = async (event) => {
         Bucket: bucket,
         Key: key,
         Expires: 300,
-        contentType: event.contentType
+        ContentType: event.contentType
     };
 
     const uploadUrl = await s3.getSignedUrlPromise('putObject', s3Params);
 
-    return JSON.stringify({
+    return {
         uploadUrl,
         key
-    });
+    };
 };
